@@ -61,19 +61,10 @@
       margin-top: 40px;
     }
 
-    video {
-      width: 40%;
-      margin-top: 20px;
-    }
-
-    audio {
-      margin-top: 20px;
-      width: 40%;
-    }
-
     .social-links {
       display: flex;
-      margin-top: 80px;
+      margin-top: 60px;
+      align-items: center;
     }
 
     .social-links a {
@@ -89,7 +80,7 @@
       height: 120px;
       border-radius: 50%;
       overflow: hidden;
-      margin-top: 20px;
+      margin-top: 25px;
     }
 
     .profile-picture img {
@@ -97,15 +88,25 @@
       height: 100%;
       object-fit: cover;
     }
+
+    .additional-picture {
+      width: 275px;
+      margin-top: 20px;
+    }
+
+    audio {
+      margin-top: 20px;
+      width: 40%;
+    }
   </style>
 </head>
 <body>
-  <div class="center-container">
+  <div class="center-container" onclick="playAudio()">
     <div class="profile-picture">
       <img src="profilepic.png" alt="Profile Picture">
     </div>
     <h1>moan.lol</h1>
-    <div class="hello-text">Just. That. Nigger.</div>
+    <div class="hello-text">Just. That. N-word.</div>
 
     <div class="social-links">
       <a href="https://doxbin.org/user/moan" target="_blank">doxbin</a>
@@ -113,7 +114,19 @@
       <a href="https://twitter.com/harmables" target="_blank">twitter</a>
     </div>
 
-    <video src="moan.mp4" controls="muted"></video>
+    <img src="moan123.png" alt="Additional Picture" class="additional-picture">
+
+    <audio id="moanAudio" autoplay="controls">
+      <source src="moan.lol.mp3" type="audio/mp3">
+    </audio>
+
+    <script>
+      function playAudio() {
+        var audio = document.getElementById('moanAudio');
+        audio.play();
+        document.removeEventListener('click', playAudio);
+      }
+    </script>
   </div>
 </body>
 </html>

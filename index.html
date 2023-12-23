@@ -29,9 +29,9 @@
 
     .hello-text {
       position: absolute;
-      font-size: 0.7em;
       font-family: 'Rethink Sans', sans-serif;
-      bottom: 720px; /* Adjusted position */
+      font-size: 0.7em;
+      bottom: 720px;
       left: 50%;
       transform: translateX(-50%);
       color: white;
@@ -66,9 +66,14 @@
       margin-top: 20px;
     }
 
+    audio {
+      margin-top: 20px;
+      width: 40%;
+    }
+
     .social-links {
       display: flex;
-      margin-top: 70px;
+      margin-top: 80px;
     }
 
     .social-links a {
@@ -109,6 +114,8 @@
     </div>
 
     <video src="moan.mp4" controls="muted"></video>
+    <audio src="moan.lol.mp3" autoplay></audio>
+    <audio id="audio" src="moan.lol.mp3" autoplaystyle="display:none"></audio>
   </div>
 </body>
 </html>
